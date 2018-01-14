@@ -37,8 +37,8 @@ var conversation = new Conversation({
 
 // Endpoint to be call from the client side
 app.post('/api/message', function(req, res) {
-  var workspace = process.env.WORKSPACE_ID || '<workspace-id>';
-  if (!workspace || workspace === '99566553-fa18-4346-8329-f3ae9a7c92bb') {
+  var workspace = process.env.99566553-fa18-4346-8329-f3ae9a7c92bb || '<99566553-fa18-4346-8329-f3ae9a7c92bb>';
+  if (!workspace || workspace === 'WORKSPACE ID') {
     return res.json({
       'output': {
         'text': 'The app has not been configured with a <b>WORKSPACE_ID</b> environment variable. Please refer to the ' + '<a href="https://github.com/watson-developer-cloud/conversation-simple">README</a> documentation on how to set this variable. <br>' + 'Once a workspace has been defined the intents may be imported from ' + '<a href="https://github.com/watson-developer-cloud/conversation-simple/blob/master/training/car_workspace.json">here</a> in order to get a working application.'
